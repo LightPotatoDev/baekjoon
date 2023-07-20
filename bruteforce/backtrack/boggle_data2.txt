@@ -1,0 +1,9 @@
+2
+ABA
+A
+
+1
+ABCD
+EFGH
+IJKL
+MNOP
