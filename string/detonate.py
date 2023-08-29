@@ -1,13 +1,12 @@
-import re
-
 s = input()
-bomb = input()
+bomb = list(input())
+l=len(bomb)
 
-L = re.finditer(bomb,s)
-starts = []
-for i in L:
-    spans.append(i.start())
+L = []
+for i in s:
+    L.append(i)
+    if len(L) >= l and L[-l:] == bomb:
+        for j in range(l):
+            L.pop()
 
-print(starts)
-
-while starts:
+print(''.join(L))

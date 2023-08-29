@@ -10,7 +10,7 @@ def picknumber(L,index,subset):
 
     A = L[:]
     for i in range(len(L)):
-        a = A.pop(0)
+        a = L.pop(0)
         picknumber(A,index+1,subset+[a])
 
 picknumber(L,0,[])
