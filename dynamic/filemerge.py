@@ -1,19 +1,21 @@
 import sys
 input = sys.stdin.readline
-import heapq
 
 T = int(input())
 
 for _ in range(T):
     n = int(input())
-    hq = list(map(int,input().split()))
-    heapq.heapify(hq)
+    L = list(map(int,input().split()))
+    S = [0]+L[:]
+    dp = [[0]*n for _ in range(n)]
 
-    ans = 0
-    for _ in range(n-1):
-        a = heapq.heappop(hq)
-        b = heapq.heappop(hq)
-        ans += (a+b)
-        heapq.heappush(hq,a+b)
+    for i in range(1,n+1):
+        S[i] += S[i-1]
 
-    print(ans)
+    for step in range(n-1):
+        for i in range(n-step-1):
+            j = i+step+1
+            A = [dp[i][k+i]+dp[k+i+1][j] for k in range(step+1)]
+            dp[i][j] = min(A)+S[j+1]-S[i]
+
+    print(dp[0][n-1])

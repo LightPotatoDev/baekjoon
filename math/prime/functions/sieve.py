@@ -1,4 +1,18 @@
 def sieve(n):
+    is_prime = [0,1] * (n//2+1)
+
+    for i in range(3,n+1,2):
+        if is_prime[i]:
+            for j in range(i*3,n+1,i*2):
+                is_prime[j] = 0
+
+    is_prime[1] = 0
+    is_prime[2] = 1
+    return is_prime
+
+#아래 함수에서 is_prime을 더 사용하기 직관적이게 변경
+
+def sieve(n):
     isPrime = [1] * (n//2+1)
     primes = [2]
 

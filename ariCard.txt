@@ -1,0 +1,22 @@
+mobAtk mobHp
+atk hp
+
+to win: (hp - mobAtk*n > 0) and (mobHp - atk*n <= 0)
+(hp > mobAtk*n) and (mobHp <= atk*n)
+
+ex: (hp > 5*n) and (5 <= atk*n)
+n = 1 -> (hp > 5) and (5 <= atk) 
+n = 2 -> (hp > 10) and (5 <= atk*2)
+n = 3 -> (hp > 15) and (5 <= atk*3)
+...
+
+n = 1 -> (hp > mobAtk*1) and (ceil(mobHp/1) <= atk)
+n = 2 -> (hp > mobAtk*2) and (ceil(mobHp/2) <= atk)
+n = 3 -> (hp > mobAtk*3) and (ceil(mobHp/3) <= atk)
+...
+
+(atk >= ceil(mobHp/m)) and (hp > mobAtk*m)
+(m >= mobHp / atk)
+
+공격 선택 경우: 최대 125000
+공격 선택 -> m 결정 -> 투 포인터

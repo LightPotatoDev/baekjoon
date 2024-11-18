@@ -1,0 +1,9 @@
+2 2
+r
+red
+ed
+d
+3
+red
+redd
+reddd

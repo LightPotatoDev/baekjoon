@@ -11,7 +11,6 @@ for _ in range(m):
 for i in graph:
     i.sort()
 
-#DFS
 def dfs():
     visited = [0] * (n+1)
     stack = [v]

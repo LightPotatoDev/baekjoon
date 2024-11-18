@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "xiosbase": "cpp",
+        "vector": "cpp",
+        "iostream": "cpp",
+        "xutility": "cpp",
+        "map": "cpp",
+        "utility": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "bitset": "cpp"
+    }
+}
